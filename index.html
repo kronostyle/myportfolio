@@ -438,15 +438,15 @@
             <h2 class="section__title" data-heading="My Portfolio">Recent Works</h2>
             
             <div class="work__filters">
-                <span class="work__item active-work">All</span>
-                <span class="work__item">Web</span>
-                <span class="work__item">App</span>
-                <span class="work__item">Design</span>
+                <span class="work__item active-work" data-filter="all">All</span>
+                <span class="work__item" data-filter=".web">Web</span>
+                <span class="work__item" data-filter=".app">App</span>
+                <span class="work__item" data-filter=".design">Design</span>
 
             </div>
 
             <div class="work__container container grid">
-                <div class="work__card">
+                <div class="work__card mix web">
                     <img src="assets/img/work-1.webp" alt="" class="work__img">
                     <h3 class="work__title">Web Design</h3>
                     <span class="work__button">Demo
@@ -464,7 +464,7 @@
                     </div>
                 </div>
 
-                <div class="work__card">
+                <div class="work__card mid app">
                     <img src="assets/img/work-2.webp" alt="" class="work__img">
                     <h3 class="work__title">App Design</h3>
                     <span class="work__button">Demo
@@ -482,7 +482,7 @@
                     </div>
                 </div>
 
-                <div class="work__card">
+                <div class="work__card mix design">
                     <img src="assets/img/work-3.webp" alt="" class="work__img">
                     <h3 class="work__title">Brand Design</h3>
                     <span class="work__button">Demo
@@ -500,7 +500,7 @@
                     </div>
                 </div>
 
-                <div class="work__card">
+                <div class="work__card mix app">
                     <img src="assets/img/work-4.webp" alt="" class="work__img">
                     <h3 class="work__title">App Design</h3>
                     <span class="work__button">Demo
@@ -518,7 +518,7 @@
                     </div>
                 </div>
 
-                <div class="work__card">
+                <div class="work__card mix web">
                     <img src="assets/img/work-5.webp" alt="" class="work__img">
                     <h3 class="work__title">Brand Design</h3>
                     <span class="work__button">Demo
@@ -536,7 +536,7 @@
                     </div>
                 </div>
 
-                <div class="work__card">
+                <div class="work__card mix design">
                     <img src="assets/img/work-6.webp" alt="" class="work__img">
                     <h3 class="work__title">Web Design</h3>
                     <span class="work__button">Demo
@@ -555,9 +555,34 @@
                 </div>
             </div>
         </section>
- 
+        
         <!-- Portfolio Popup -->
         
+        <div class="portfolio__popup">
+            <div class="portfolio__popup-inner">
+                <div class="portfolio__popup-content grid">
+                    <span class="portfolio__popup-close">
+                        <i class="uil uil-times"></i>
+                    </span>
+                    <div class="pp__thumbnail">
+                        <img src="./assets/img/work-2.webp" alt="" class="portfolio__popup-img">
+                    </div>
+                    <div class="portfolio__popup-info">
+                        <div class="portfolio__popup-subtitle">Featured - <span>Design</span></div>
+                        <div class="portfolio__popup-body">
+                            <h3 class="details__title">App for technology & services</h3>
+                        <p class="details__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore, debitis minima! Provident.</p>
+                        <ul class="details__info">
+                            <li>Created - <span>4 dec 2020</span></li>
+                            <li>Technologies - <span>HTML, CSS, JS</span></li>
+                            <li>Role - <span>Frontend Developer</span></li>
+                            <li>View - <span><a href="#">www.vsonecorporation.com</a></span></li>
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!--===== Services =====-->
         
         <!--===== Testimonials =====-->
@@ -572,10 +597,10 @@
     
 
     <!--========== MIXITUP FILTER ==========-->
-    <script src="assets/js/mixitup.min.js"></script>
+    <script src="./assets/js/mixitup.min.js"></script>
 
     <!--========== SWIPER JS ==========-->
-    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="./assets/js/swiper-bundle.min.js"></script>
 
     <!--========== MAIN JS ==========-->
     <script src="./assets/js/main.js"></script>
