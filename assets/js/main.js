@@ -56,6 +56,7 @@ linkWork.forEach(l => l.addEventListener("click", activeWork))
 document.addEventListener("click", (e) => {
     if(e.target.classList.contains("work__button")){
         togglePortfolioPopup();
+        portfolioItemDetails(e.target.parentElement)
     }
 })
 function togglePortfolioPopup() {
@@ -63,11 +64,58 @@ function togglePortfolioPopup() {
 }
 
  document.querySelector(".portfolio__popup-close").addEventListener("click", togglePortfolioPopup)
-/*=============== SERVICES MODAL ===============*/
 
+function portfolioItemDetails(portfolioItem) {
+    document.querySelector(".pp__thumbnail img").src = portfolioItem.querySelector(".work__img").src;
+    
+    document.querySelector(".portfolio__popup-subtitle span").innerHTML = portfolioItem.querySelector(".work__title").innerHTML;
+    document.querySelector(".portfolio__popup-body").innerHTML = portfolioItem.querySelector(".portfolio__item-details").innerHTML;
 
+}
+ /*=============== SERVICES MODAL ===============*/
+
+ const modalViews = document.querySelectorAll('.services__modal'),
+ modalBtns = document.querySelectorAll('.services__button'),
+ modalCloses = document.querySelectorAll('.services__modal-close')
+
+ let modal = function(modalClick) {
+    modalViews[modalClick].classList.add('active-modal')
+ }
+
+ modalBtns.forEach((modalBtns, i) => {
+    modalBtns.addEventListener('click', () => {
+        modal(i)
+    })
+ })
+
+ modalCloses.forEach((modalClose) => {
+    modalClose.addEventListener("click", ()=>{
+        modalViews.forEach((modalView) => {
+            modalView.classList.remove('active-modal')
+        })
+    })
+ })
 /*=============== SWIPER TESTIMONIAL ===============*/
-
+let swiper = new Swiper(".testimonials__container", {
+    spaceBetween: 24,
+    loop: true,
+    grabCursor: true,    
+    pagination:{
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    breakpoints: {
+        576: {
+            slidesPerView: 2,
+            
+        },
+        768:{
+            slidesPerView: 2,
+            spaceBetween:48,
+        },
+       
+    },
+});
 
 /*=============== INPUT ANIMATION ===============*/
 
