@@ -530,7 +530,7 @@ background-color: var(--skin-color);
 
 .skills__header{
     display: flex;
-    align-items: center;
+    gap: .5rem;
     cursor: pointer;
 }
 
@@ -573,7 +573,7 @@ background-color: var(--skin-color);
     display: block;
 }
 
-.skilss__list{
+.skills__list{
     row-gap: 1.8rem;
 }
 
@@ -1330,8 +1330,8 @@ opacity: 1;
     }
 
     .skills__container{
-        grid-template-columns: 300px;
-        row-gap: 3rem;
+        grid-template-columns: 280px;
+        row-gap: 1.2rem;
     }
 
     .work__container{
