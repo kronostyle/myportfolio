@@ -523,9 +523,10 @@ background-color: var(--skin-color);
 }
 /*===== Skills Section =====*/
 .skill__container{
-    grid-template-columns: 360px 320px;
-    column-gap: 3rem;
-    justify-content: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 3rem;
 }
 
 .skills__header{
@@ -602,7 +603,11 @@ background-color: var(--skin-color);
     background-color: var(--skin-color);
 }
 
-
+.skills__group{
+    display: flex;
+    flex-direction: column;
+    width: 25dvw;
+}
 /*===== Work Section =====*/
 .work__container{
     grid-template-columns: repeat(3,330px);
@@ -1280,7 +1285,7 @@ opacity: 1;
     }
 
     .skills__container{
-        grid-template-columns: 340px 300px;
+      gap: 2.6rem;
     }
 
     .skills__list{
@@ -1320,6 +1325,7 @@ opacity: 1;
 
 /* For Medium Devices */
 @media screen and (max-width: 768px) {
+  
     .about__img{
         width: 250px;
     }
@@ -1329,10 +1335,9 @@ opacity: 1;
         row-gap: 3rem;
     }
 
-    .skills__container{
-        grid-template-columns: 280px;
-        row-gap: 1.2rem;
-    }
+     .skills__container{
+       gap: 2rem;
+    } 
 
     .work__container{
         grid-template-columns: 330px;
@@ -1451,7 +1456,10 @@ opacity: 1;
         padding: 0;
     }
     
-
+    .skills__container{
+        gap: 1rem;
+        padding: 0 1.3rem;
+    }
     .services__modal-content{
         padding: 4.5rem 1.5rem 2.5rem;
     }
@@ -1496,8 +1504,10 @@ opacity: 1;
         row-gap: .5rem;
     }
 
+    .skills__container{
+        gap: 0;
+    }
     .contact__container,
-    .skills__container,
     .work__container,
     .qualification__container{
         grid-template-columns: 1fr;
